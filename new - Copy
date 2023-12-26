@@ -1,0 +1,148 @@
+Cau 1
+Do web hoạt động theo kiến trúc client-server, nên thông tin web sẽ được đặt tại các máy server, người dùng sẽ sử dụng trình duyệt để yêu cầu thông tin từ một server cụ thể (bước 1). Khi nhận được yêu cầu từ trình duyệt, server sẽ xử lý yêu cầu (bước 2) và gửi lại kết quả (bước 3) để hiển thị lên trình duyệt (bước 4)
+
+- Là một lập trình viên, bạn cần phải xem xét trình duyệt ở cả hai vai trò. Thứ nhất, là người sử dụng, bạn sẽ sử dụng trình duyệt để duyệt web. Thứ hai, là lập trình viên, bạn sẽ sử dụng trình duyệt để xem trước trang web kết quả, sửa lỗi, và thiết kế giao diện.
+
+- Server-side rendering (SSR): Web được tạo trước bởi máy chủ trước khi đưa đến trình duyệt người dùng. Tốt cho tải nhanh và SEO.
+
+- Client-side rendering (CSR): Trang web cơ bản được tải về, sau đó JavaScript xử lý để hiển thị dữ liệu và cập nhật giao diện. Tạo trải nghiệm tương tác cao nhưng có thể tải chậm ban đầu.
+
+- Trong thực tế, lựa chọn giữa SSR và CSR phụ thuộc vào yêu cầu của dự án cũng như mục tiêu trải nghiệm người dùng. Ví dụ, các trang web đòi hỏi tải nhanh hoặc cần tối ưu SEO thì SSR có thể là lựa chọn tốt hơn vì khả năng tạo ra trang web hoàn chỉnh từ đầu. Trong khi đó, các ứng dụng web động và phản hồi tốt hơn có thể ưa chuộng CSR để tận dụng tính tương tác cao của nó. Đôi khi, các dự án sẽ kết hợp cả hai phương pháp để tối ưu hóa trải nghiệm người dùng.
+
+
+Cau 4
+Cách tạo website:
+
+HTML: Ngôn ngữ đánh dấu siêu văn bản, là nền tảng của mọi trang web.
+CSS: Ngôn ngữ quy định kiểu dáng, giúp định dạng giao diện trang web.
+JavaScript: Ngôn ngữ lập trình giúp trang web tương tác và năng động.
+Học căn bản:
+
+Viết Semantic HTML: Sử dụng các thẻ HTML đúng ngữ nghĩa để cải thiện khả năng truy cập và SEO.
+Các Biểu mẫu và Xác thực: Tạo các biểu mẫu để thu thập thông tin từ người dùng và đảm bảo dữ liệu hợp lệ.
+Các Quy ước và Luyện tập tốt: Tuân theo các quy ước và thực hành tốt nhất để đảm bảo trang web của bạn có chất lượng cao.
+HTML:
+
+Cấu trúc cơ bản: Hiểu các thẻ HTML cơ bản và cách sử dụng chúng để tạo trang web.
+Hiển thị: Định dạng văn bản, hình ảnh, bảng và các yếu tố khác trên trang web.
+Liên kết: Tạo liên kết đến các trang web khác.
+CSS:
+
+Cú pháp và cấu trúc cơ bản: Hiểu cú pháp CSS và cách sử dụng nó để định dạng trang web.
+Positioning: Vị trí các yếu tố trên trang web.
+Box Model: Hiểu cách trình duyệt hiển thị các hộp HTML.
+JavaScript:
+
+Cú pháp và cấu trúc cơ bản: Hiểu cú pháp JavaScript và cách sử dụng nó để thêm chức năng cho trang web.
+Thao tác DOM: Tương tác với các yếu tố HTML và CSS bằng JavaScript.
+AJAX: Lấy dữ liệu từ máy chủ mà không cần tải lại trang.
+Kiến thức nâng cao:
+
+Hoisting: Hiểu cách JavaScript nâng các biến và hàm.
+Event Bubbling, Bubbling: Hiểu cách các sự kiện được xử lý trong JavaScript.
+Prototype, Shadow DOM: Hiểu các tính năng nâng cao của JavaScript.
+Quản lý phiên bản:
+
+Git: Hệ thống kiểm soát phiên bản phổ biến nhất.
+GitHub: Dịch vụ lưu trữ kho Git phổ biến.
+Bảo mật web:
+
+HTTPS: Giao thức bảo mật giúp bảo vệ dữ liệu người dùng.
+CORS: Cho phép các trang web từ các miền khác truy cập dữ liệu.
+OWASP: Danh sách các lỗ hổng bảo mật web phổ biến.
+Trình quản lý gói:
+
+npm: Trình quản lý gói phổ biến cho JavaScript.
+yarn: Trình quản lý gói thay thế cho npm.
+Chọn công cụ:
+
+npm hoặc yarn: Cả hai đều là các trình quản lý gói tốt, hãy chọn một trong hai.
+Chọn ít nhất một framework: React, Angular, Vue.js, etc.
+
+
+Cau 2
+
+c/
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <title>Pagination</title>
+ <style>
+ 
+  .content {
+    margin: 10px auto;
+    width: 800px;
+    text-align: center;
+    border: 1px solid red;
+    padding: 20px;
+  }
+  .pages a {
+    display: inline-block;
+    width: 40px;
+    background: green;
+    color: white;
+    text-decoration: none;
+  }
+
+ </style>
+</head>
+<body>
+  <div class = "content">
+    <div class = "pages">
+      <a href = "pagination.php?page=1">1</a>
+      <a href = "pagination.php?page=2">2</a>
+      <a href = "pagination.php?page=3">3</a>
+      <a href = "pagination.php?page=4">4</a>
+      <a href = "pagination.php?page=5">5</a>
+      <a href = "pagination.php?page=6">6</a>
+      <a href = "pagination.php?page=7">7</a>
+    </div>
+    <?php
+      $page = (isset($_GET['page']) == true) ? $_GET['page'] : 0;
+    ?>
+    <p>Bạn đang ở trang thứ <?php echo $page; ?></p>
+  </div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+a/
+MVC quan trọng bao gồm:
+
+Model: Nó bao gồm tất cả dữ liệu và logic liên quan của nó.
+View: Trình bày dữ liệu cho người dùng hoặc xử lý tương tác của người dùng.
+Controller: Là phần quan trọng nhất trong mô hình, nó liên kết phần Model và View.
+View
+View là một phần của ứng dụng đại diện cho việc trình bày dữ liệu.
+
+View được tạo bởi các dữ liệu mà chúng ta lấy từ dữ liệu trong model. Một view yêu cầu model cung cấp đầy đủ dữ liệu để nó hiển thị đầu ra cho người dùng.
+
+View chính là nới chứa những giao diện như một nút bấm, khung nhập, menu, hình ảnh… nó đảm nhiệm nhiệm vụ hiển thị dữ liệu và giúp người dùng tương tác với hệ thống.
+
+Controller
+Controller là một phần của ứng dụng xử lý tương tác của người dùng. Bộ điều khiển diễn giải đầu vào chuột và bàn phím từ người dùng, thông báo cho model và view để thay đổi khi thích hợp.
+
+Controller là nới tiếp nhận những yêu cầu xử lý được gửi từ người dùng, nó sẽ gồm những class/ function xử lý nhiều nghiệp vụ logic giúp lấy đúng dữ liệu thông tin cần thiết nhờ các nghiệp vụ lớp Model cung cấp và hiển thị dữ liệu đó ra cho người dùng nhờ lớp View.
+
+Controller gửi các lệnh đến model để làm thay đổi trạng thái của nó (Ví dụ: ta thêm mới 1 user hoặc cập nhật tên 1 user). Controller cũng gửi các lệnh đến view liên quan của nó để thay đổi cách hiển thị của view (Ví dụ: xem thông tin 1 user).
+
+Model
+Thành phần model lưu trữ dữ liệu và logic liên quan của nó. Bao gồm các class function xử lý các tác vụ như truy vấn, thêm, sửa hoặc xóa dữ liệu. Ví dụ, một đối tượng Controller sẽ lấy thông tin khách hàng từ cơ sở dữ liệu. Nó thao tác dữ liệu và gửi trở lại cơ sở dữ liệu hoặc sử dụng nó để hiển thị dữ liệu.
+
+
+
+
+
+b/
+Sự tương tác giữa các thành phần
+Controller tương tác với qua lại với View.
+Controller tương tác qua lại với Model.
+Model và View không có sự tương tác với nhau trực tiếp mà nó tương tác với nhau thông qua Controller.
+Ví dụ cho sự tương tác: Khi người dùng ấn đăng nhập từ view thì request sẽ được gửi từ trình duyệt đến controller, controller sẽ gọi đến model xử lý logic và trả lại kết quả đó cho user thông qua view .
